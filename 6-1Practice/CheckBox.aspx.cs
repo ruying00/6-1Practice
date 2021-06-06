@@ -13,5 +13,18 @@ namespace _6_1Practice
         {
 
         }
+
+        protected void btn1_Click(object sender, EventArgs e)
+        {
+            string rex = "";
+            for (int i = 0; i < cbl_cpu.Items.Count; i++)
+            {
+                if (cbl_cpu.Items[i].Selected)
+                {
+                    rex += cbl_cpu.Items[i].Text + "<br />";
+                }
+            }
+            lb_txt.Text = rex;
+        }
     }
 }
